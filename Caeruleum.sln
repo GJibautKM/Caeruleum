@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeruleum.Model", "Caeruleum.Model\Caeruleum.Model.csproj", "{33F703BF-0764-490B-AFE5-B8DC0911E9D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeruleum.InMemoryDb", "Caeruleum.InMemoryDb\Caeruleum.InMemoryDb.csproj", "{CDEF5061-7281-447B-A884-D645076914CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33F703BF-0764-490B-AFE5-B8DC0911E9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33F703BF-0764-490B-AFE5-B8DC0911E9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33F703BF-0764-490B-AFE5-B8DC0911E9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEF5061-7281-447B-A884-D645076914CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEF5061-7281-447B-A884-D645076914CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEF5061-7281-447B-A884-D645076914CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEF5061-7281-447B-A884-D645076914CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
