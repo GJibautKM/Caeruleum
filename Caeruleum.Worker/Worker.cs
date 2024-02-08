@@ -10,9 +10,9 @@ public class Worker(
 {
     private Task Idle(CancellationToken stoppingToken)
     {
-        int seconds = Random.Shared.Next(10, 60);
-        TimeSpan delay = TimeSpan.FromSeconds(seconds);
-        logger.LogInformation("Sleeping for {seconds} seconds", seconds);
+        int minutes = Random.Shared.Next(2, 10);
+        TimeSpan delay = TimeSpan.FromMinutes(minutes);
+        logger.LogInformation("Sleeping for {minutes} minutes", minutes);
         return Task.Delay(delay, stoppingToken);
     }
     

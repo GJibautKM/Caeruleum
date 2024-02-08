@@ -17,6 +17,7 @@ services.AddSerilog(loggerCfg =>
 });
 services.AddCaeruleumInMemoryDb();
 services.AddHostedService<Worker>();
+services.AddHostedService<SideWorker>();
 
 var host = builder.Build();
 host.Run();
