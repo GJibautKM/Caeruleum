@@ -10,7 +10,7 @@ IServiceCollection services = builder.Services;
 services.AddSerilog(loggerCfg =>
 {
     loggerCfg.WriteTo.Console(outputTemplate: logTemplate);
-    loggerCfg.MinimumLevel.Is(LogEventLevel.Debug);
+    loggerCfg.MinimumLevel.Is(LogEventLevel.Information);
     loggerCfg.MinimumLevel.Override("Microsoft", LogEventLevel.Warning);
     loggerCfg.MinimumLevel.Override("System", LogEventLevel.Warning);
     loggerCfg.MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information);
