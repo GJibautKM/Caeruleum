@@ -16,6 +16,7 @@ services.AddSerilog(loggerCfg =>
 });
 services.AddCaeruleumInMemoryDb();
 services.AddControllers();
+services.AddRazorPages();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 
@@ -25,4 +26,5 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+app.MapRazorPages();
 app.Run();
