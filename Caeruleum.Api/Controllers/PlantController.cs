@@ -20,8 +20,8 @@ public class PlantController(
         return plantService.GetAllAsync();
     }
 
-    /*[HttpGet]
-    [Route($"{nameof(plantId)}:int:min(1)")]
+    [HttpGet]
+    [Route($"{{{nameof(plantId)}:int:min(1)}}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Plant>> GetOne([FromRoute] int plantId)
@@ -31,5 +31,5 @@ public class PlantController(
         return await plantService.GetByIdAsync(plantId) is Plant plant
             ? Ok(plant)
             : NotFound();
-    }*/
+    }
 }
