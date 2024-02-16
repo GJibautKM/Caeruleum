@@ -10,7 +10,7 @@ internal class PlantService(
 {
     public IAsyncEnumerable<Plant> GetAllAsync()
     {
-        logger.LogDebug("{methodName}()", nameof(GetAllAsync));
+        logger.LogInformation("{methodName}()", nameof(GetAllAsync));
         
         IEnumerable<Plant> plants = InMemoryPlants.Plants;
         return plants.ToAsyncEnumerable();
@@ -20,7 +20,7 @@ internal class PlantService(
     {
         Plant? plant = InMemoryPlants.GetById(plantId);
 
-        logger.LogDebug("{methodName}({plantId}) => {plant}", nameof(GetByIdAsync), plantId, plant);
+        logger.LogInformation("{methodName}({plantId}) => {plant}", nameof(GetByIdAsync), plantId, plant);
 
         return ValueTask.FromResult(plant);
     }
