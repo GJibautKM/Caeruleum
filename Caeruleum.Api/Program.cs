@@ -5,10 +5,15 @@ using Serilog.Events;
 string logTemplate = "{Timestamp:HH:mm:ss}|{Level:u4}|{SourceContext}|{Message:lj}{NewLine}{Exception}";
 
 var builder = WebApplication.CreateBuilder(args);
+IConfiguration configuration = builder.Configuration;
 IServiceCollection services = builder.Services;
 services.AddSerilog(loggerCfg =>
 {
     loggerCfg.WriteTo.Console(outputTemplate: logTemplate);
+    loggerCfg.WriteTo.ApplicationInsights(
+        configuration.GetConnectionString("AzureApplicationInsight"),
+        TelemetryConverter.Traces
+    );
     loggerCfg.MinimumLevel.Is(LogEventLevel.Information);
     loggerCfg.MinimumLevel.Override("Microsoft", LogEventLevel.Warning);
     loggerCfg.MinimumLevel.Override("System", LogEventLevel.Warning);
